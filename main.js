@@ -33,6 +33,7 @@ const jokeCommand = require('./commands/joke');
 const quoteCommand = require('./commands/quote');
 const factCommand = require('./commands/fact');
 const weatherCommand = require('./commands/weather');
+const mariamCommand = require('./commands/mariam');
 const newsCommand = require('./commands/news');
 const kickCommand = require('./commands/kick');
 const simageCommand = require('./commands/simage');
@@ -254,6 +255,11 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 const text = userMessage.slice(4).trim();
                 await ttsCommand(sock, chatId, text);
                 break;
+
+            case userMessage.startsWith('.mariam'):
+            await mariamCommand(sock, chatId, message);
+            break;
+                
             case userMessage === '.delete' || userMessage === '.del':
                 await deleteCommand(sock, chatId, message, senderId);
                 break;
