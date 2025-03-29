@@ -25,6 +25,7 @@ async function helpCommand(sock, chatId, channelLink) {
 ║ ➤ .fact
 ║ ➤ .weather <city>
 ║ ➤ .news
+║ ➤ .mariam <your question> 
 ║ ➤ .attp <text>
 ║ ➤ .lyrics <song_title>
 ║ ➤ .8ball <question>
